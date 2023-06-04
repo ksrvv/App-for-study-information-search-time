@@ -30,6 +30,7 @@ namespace WindowsFormsApp2
         public ResultsFrom(bool loadedToDb)
         {
             loaded = loadedToDb;
+        
             InitializeComponent();
             if (loaded == false)
               UpadteDatabaseAsync();
@@ -63,10 +64,13 @@ namespace WindowsFormsApp2
         private StringBuilder ReturnTypesString()
         {
             StringBuilder sb = new StringBuilder();
-            foreach (var type in OutData.types)
+            var ordered = OutData.types.OrderBy(n => n);// по возрастанию
+           
+            foreach (var type in ordered)
             {
-                sb.Append("Тип " + " " + type.ToString() + " \n");
+                sb.Append("Тип " + type.ToString() + " \n");
             }
+           
             return sb;
         }
         private StringBuilder ReturnReprTimeString()
@@ -99,6 +103,8 @@ namespace WindowsFormsApp2
         private async Task UpadteDatabaseAsync()
 
         {
+            db.Database.EnsureCreated();
+          
             var all = db.Datas.ToList();
             var result = (from d in all where d.Name == OutData.Name where d.Group == OutData.Group where d.NumberOfIndicators == OutData.NumberOfIndicators where d.NumberOfRepresentations == OutData.NumberOfRepresentations  select d);
             if (result.Count() == 0)

@@ -73,6 +73,7 @@ namespace WindowsFormsApp2
         {
             if (OutData.types.Count == 0)
                 errorsHandler.EmptyIndicatorTypesList();
+           
             else
             {
                 nextForm = true;

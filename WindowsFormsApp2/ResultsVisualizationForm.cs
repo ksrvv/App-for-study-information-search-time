@@ -103,8 +103,8 @@ namespace WindowsFormsApp2
       Configuration = new CartesianMapper<Point>().X(point => point.X).Y(point => point.Y),
       Title = "Экспериментальные значения времени информационного поиска (сек*10^2)",
       Values = values,
-        Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(47,155,255)),
-         Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromArgb(47,126,193,255)),
+        Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(59,244,95)),
+         Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromArgb(47,59,244,95)),
 
       PointGeometrySize = 10
     },

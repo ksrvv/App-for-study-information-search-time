@@ -43,5 +43,6 @@ namespace WindowsFormsApp2
         {
             MessageBox.Show("Вы не выбрали ни один из типов индикаторов.", "Ошибка доступа");
         }
+       
     }
 }
