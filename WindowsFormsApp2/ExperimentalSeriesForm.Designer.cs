@@ -41,7 +41,7 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // Form7
+            // ExperimentalSeriesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -50,9 +50,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Form7";
+            this.Name = "ExperimentalSeriesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form7_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form7_FormClosed);

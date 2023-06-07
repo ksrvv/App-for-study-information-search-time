@@ -58,6 +58,8 @@ namespace WindowsFormsApp2
             dataGridView1.Height = this.Height - 220;
             dataGridView1.Width = this.Width - 25;
             roundCornerButton1.Location = new Point(this.Width / 2 - roundCornerButton1.Width / 2, dataGridView1.Height + 60);
+            roundCornerButton2.Location = new Point(this.Width / 2 - roundCornerButton1.Width / 2 + roundCornerButton1.Width+20, dataGridView1.Height + 60);
+
             label1.Location = new Point(23, roundCornerButton1.Location.Y + roundCornerButton1.Height/2);
             label2.Location = new Point(this.Width/2- label2.Width/2, this.Height/2);
 
@@ -79,6 +81,7 @@ namespace WindowsFormsApp2
                 {
                     dataGridView1.Visible = false;
                     roundCornerButton1.Visible = false;
+                    roundCornerButton2.Visible = false;
                     label2.Visible = true;
                 }
 
@@ -88,6 +91,7 @@ namespace WindowsFormsApp2
                 
                 dataGridView1.Visible = false;
                 roundCornerButton1.Visible = false;
+                roundCornerButton2.Visible = false;
                 label2.Visible = true;
                
             }
@@ -196,6 +200,7 @@ namespace WindowsFormsApp2
         {
             Reload();
             roundCornerButton1.Refresh();
+            roundCornerButton2.Refresh();
             dataGridView1.Refresh();
             label1.Refresh();
         }
@@ -240,5 +245,19 @@ namespace WindowsFormsApp2
         {
             Application.Exit();
         }
+
+       
+
+        private void roundCornerButton2_Click_1(object sender, EventArgs e)
+        {
+            db.Datas.RemoveRange(db.Datas);
+            db.SaveChanges();
+            dataGridView1.Visible = false;
+            roundCornerButton1.Visible = false;
+            roundCornerButton2.Visible = false;
+            label2.Visible = true;
+        
+
+    }
     }
 }
